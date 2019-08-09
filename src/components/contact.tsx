@@ -1,11 +1,11 @@
-import React from "react"
-import Band from "./band"
-import ButtonLink from "./button-link"
-import Container from "./container"
+import React from 'react';
+import Band from './band';
+import ButtonLink from './button-link';
+import Container from './container';
 
 const Contact = () => (
   <Band>
-    <Container centerText>
+    <Container centerText={true}>
       <ButtonLink
         href="https://www.linkedin.com/in/dandawsonbrown/"
         target="_blank"
@@ -14,6 +14,6 @@ const Contact = () => (
       </ButtonLink>
     </Container>
   </Band>
-)
+);
 
-export default Contact
+export default Contact;

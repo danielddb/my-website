@@ -1,11 +1,11 @@
-import React from "react"
-import styled from "styled-components"
-import { useInView } from "react-intersection-observer"
-import Band from "./band"
-import Container from "./container"
-import * as mixins from "../theme/mixins"
-import { toRem } from "../theme/typography"
-import mp4Path from "../videos/me-wimbledon.mp4"
+import React from 'react';
+import { useInView } from 'react-intersection-observer';
+import styled from 'styled-components';
+import * as mixins from '../theme/mixins';
+import { toRem } from '../theme/typography';
+import mp4Path from '../videos/me-wimbledon.mp4';
+import Band from './band';
+import Container from './container';
 
 const VideoContainer = styled.div`
   position: absolute;
@@ -14,7 +14,7 @@ const VideoContainer = styled.div`
   width: 100%;
   height: 100%;
   overflow: hidden;
-`
+`;
 
 const Video = styled.video`
   /* Make video to at least 100% wide and tall */
@@ -30,19 +30,25 @@ const Video = styled.video`
   top: 50%;
   left: 50%;
   transform: translate(-50%, -60%);
-`
+`;
 
 const TennisVideo = () => {
   const [ref, inView] = useInView({
-    triggerOnce: true,
     threshold: 0,
-  })
+    triggerOnce: true
+  });
 
   return (
     <VideoContainer>
       <div ref={ref}>
         {inView && (
-          <Video autoPlay controls={false} loop muted playsInline>
+          <Video
+            autoPlay={true}
+            controls={false}
+            loop={true}
+            muted={true}
+            playsInline={true}
+          >
             <source src={mp4Path} type="video/mp4" />
             <p>
               Your browser doesn't support HTML5 video. Here is a
@@ -52,8 +58,8 @@ const TennisVideo = () => {
         )}
       </div>
     </VideoContainer>
-  )
-}
+  );
+};
 
 const TennisWrap = styled.div`
   ${mixins.respondTo.md`  
@@ -71,11 +77,11 @@ const TennisWrap = styled.div`
     display: flex;
     align-items: center;
   }
-`
+`;
 
 const TennisContainer = styled(Container)`
   max-width: ${toRem(700)};
-`
+`;
 
 const Tennis = () => (
   <TennisWrap>
@@ -102,6 +108,6 @@ const Tennis = () => (
       <TennisVideo />
     </div>
   </TennisWrap>
-)
+);
 
-export default Tennis
+export default Tennis;

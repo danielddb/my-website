@@ -1,8 +1,8 @@
-import { createGlobalStyle } from "styled-components"
-import * as mixins from "../theme/mixins"
-import { typographyKeys } from "../theme/typography"
-import { rootFontSize, rootLineHeightScale } from "../theme/theme"
-import "../fonts/stylesheet.css"
+import { createGlobalStyle } from 'styled-components';
+import '../fonts/stylesheet.css';
+import * as mixins from '../theme/mixins';
+import { rootFontSize, rootLineHeightScale } from '../theme/theme';
+import { TypographyLevel } from '../theme/typography';
 
 const GlobalStyle = createGlobalStyle`  
   html {
@@ -30,19 +30,19 @@ const GlobalStyle = createGlobalStyle`
   }
 
   h1 {
-    ${mixins.type(typographyKeys.h1)}
+    ${mixins.type(TypographyLevel.H1)}
   }
 
   h2 {
-    ${mixins.type(typographyKeys.h2)}
+    ${mixins.type(TypographyLevel.H2)}
   }
 
   h3 {
-    ${mixins.type(typographyKeys.h3)}
+    ${mixins.type(TypographyLevel.H3)}
   }
 
   h4, h5, h6 {
-    ${mixins.type(typographyKeys.h4)}
+    ${mixins.type(TypographyLevel.H4)}
   }
 
   hr {
@@ -52,6 +52,6 @@ const GlobalStyle = createGlobalStyle`
   a {
     ${mixins.link}
   }
-`
+`;
 
-export default GlobalStyle
+export default GlobalStyle;
