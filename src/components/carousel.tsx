@@ -34,11 +34,7 @@ const UnstyledCarouselItem: FunctionComponent<{
 );
 
 export const CarouselItem = styled(UnstyledCarouselItem)`
-  display: grid;
-  align-items: center;
-  padding: ${scale()};
-  background: rgba(0, 0, 0, 0.1);
-  border-radius: 2px;
+  display: flex;
 `;
 
 const CarouselItems = styled(a.div)<{ columns: number }>`

@@ -8,6 +8,7 @@ import Container from './container';
 import { IconDictionary } from './icon';
 import Icon from './icon';
 import IconButton from './icon-button';
+import OpaqueCard from './opaque-card';
 import Theme from './theme';
 
 const Tabs = styled.div`
@@ -90,30 +91,47 @@ const Skills = () => {
           </Tabs>
           <Carousel nextIndex={nextIndex} onIndexChange={setNextIndex}>
             <CarouselItem>
-              During my time at Vermeg, I've had the opportunity to work with
-              Angular on many projects. This included converting legacy Java /
-              Flex / Flash applications to single-page Angular applications with
-              NGRX to handle state-management.
+              <OpaqueCard>
+                <p>
+                  During my time at Vermeg, I've had the opportunity to work
+                  with Angular on many projects. This included converting legacy
+                  Java / Flex / Flash applications to single-page Angular
+                  applications with NGRX to handle state-management.
+                </p>
+              </OpaqueCard>
             </CarouselItem>
             <CarouselItem>
-              My personal favourite framework of choice is React. I'm yet to
-              have commercial experience with it so I'm very much looking
-              forward to future opportunities using it. This site is built with
-              Gatsby and React and you can view the code on{' '}
-              <a href="https://github.com/danielddb/my-website">GitHub</a>
+              <OpaqueCard>
+                <p>
+                  My personal favourite framework of choice is React. I'm yet to
+                  have commercial experience with it so I'm very much looking
+                  forward to future opportunities using it. This site is built
+                  with Gatsby and React and you can view the code on{' '}
+                  <a href="https://github.com/danielddb/my-website">GitHub</a>.
+                </p>
+              </OpaqueCard>
             </CarouselItem>
             <CarouselItem>
-              During my time at npower and Vermeg I've had the opportunity to
-              work with TypeScript in numerous projects. I couldn't imagine not
-              using it for future projects as having a typed language in JS land
-              is so useful and has been great for catching bugs that might have
-              cropped up without having a typed language.
+              <OpaqueCard>
+                <p>
+                  During my time at npower and Vermeg I've had the opportunity
+                  to work with TypeScript in numerous projects. I couldn't
+                  imagine not using it for future projects as having a typed
+                  language in JS land is so useful and has been great for
+                  catching bugs that might have cropped up without having a
+                  typed language.
+                </p>
+              </OpaqueCard>
             </CarouselItem>
             <CarouselItem>
-              During my time at Vermeg, I've had the opportunity to develop
-              Angular NPM packages to be used as part of the "ng-vermeg"
-              component library. I introduced Lerna to the project to help ease
-              dependency management and versioning of components.
+              <OpaqueCard>
+                <p>
+                  During my time at Vermeg, I've had the opportunity to develop
+                  Angular NPM packages to be used as part of the "ng-vermeg"
+                  component library. I introduced Lerna to the project to help
+                  ease dependency management and versioning of components.
+                </p>
+              </OpaqueCard>
             </CarouselItem>
           </Carousel>
         </Container>
