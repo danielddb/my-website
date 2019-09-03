@@ -8,15 +8,21 @@ import Band from './band';
 import Container from './container';
 
 const VideoContainer = styled.div`
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
+  ${mixins.respondTo.md`  
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  `}
 `;
 
 const Video = styled.video`
+  display: block;
+  width: 100%;
+
+  ${mixins.respondTo.md`
   /* Make video to at least 100% wide and tall */
   min-width: 100%;
   min-height: 100%;
@@ -30,6 +36,7 @@ const Video = styled.video`
   top: 50%;
   left: 50%;
   transform: translate(-50%, -60%);
+  `}
 `;
 
 const TennisVideo = () => {
@@ -66,12 +73,12 @@ const TennisWrap = styled.div`
     display: grid;
     grid-template-columns: 1fr 1fr;
     justify-content: flex-end;
-  `}
 
-  > div {
-    position: relative;
-    min-height: ${mixins.scale(16)};
-  }
+    .video-wrap {
+      position: relative;
+      min-height: ${mixins.scale(16)};
+    }
+  `}
 
   ${Band} {
     display: flex;
@@ -104,7 +111,7 @@ const Tennis = () => (
         </p>
       </TennisContainer>
     </Band>
-    <div>
+    <div className="video-wrap">
       <TennisVideo />
     </div>
   </TennisWrap>
