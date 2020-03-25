@@ -1,15 +1,25 @@
-import React, { FunctionComponent } from 'react';
-import { Normalize } from 'styled-normalize';
-import GlobalStyle from './global-style';
-import Theme from './theme';
+import React from 'react';
+import styled from 'styled-components';
+import Footer from './footer';
+import Navbar from './navbar';
 
-const Layout: FunctionComponent<{}> = ({ children }) => {
+const Wrap = styled.div`
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+`;
+
+const Content = styled.main`
+  flex: 1;
+`;
+
+const Layout: React.FC = ({ children }) => {
   return (
-    <Theme>
-      <Normalize />
-      <GlobalStyle />
-      {children}
-    </Theme>
+    <Wrap>
+      <Navbar />
+      <Content>{children}</Content>
+      <Footer />
+    </Wrap>
   );
 };
 

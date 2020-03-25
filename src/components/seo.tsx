@@ -5,16 +5,16 @@
  * See: https://www.gatsbyjs.org/docs/use-static-query/
  */
 
-import { graphql, useStaticQuery } from 'gatsby';
-import React, { FunctionComponent } from 'react';
+import React from 'react';
 import Helmet from 'react-helmet';
+import { useStaticQuery, graphql } from 'gatsby';
 
-const Seo: FunctionComponent<{
-  title: string;
+const SEO: React.FC<{
   description?: string;
   lang?: string;
   meta?: any[];
-}> = ({ title, description, lang, meta }) => {
+  title: string;
+}> = ({ description, lang, meta, title }) => {
   const { site } = useStaticQuery(
     graphql`
       query {
@@ -40,46 +40,46 @@ const Seo: FunctionComponent<{
       titleTemplate={`%s | ${site.siteMetadata.title}`}
       meta={[
         {
-          content: metaDescription,
-          name: `description`
+          name: `description`,
+          content: metaDescription
         },
         {
-          content: title,
-          property: `og:title`
+          property: `og:title`,
+          content: title
         },
         {
-          content: metaDescription,
-          property: `og:description`
+          property: `og:description`,
+          content: metaDescription
         },
         {
-          content: `website`,
-          property: `og:type`
+          property: `og:type`,
+          content: `website`
         },
         {
-          content: `summary`,
-          name: `twitter:card`
+          name: `twitter:card`,
+          content: `summary`
         },
         {
-          content: site.siteMetadata.author,
-          name: `twitter:creator`
+          name: `twitter:creator`,
+          content: site.siteMetadata.author
         },
         {
-          content: title,
-          name: `twitter:title`
+          name: `twitter:title`,
+          content: title
         },
         {
-          content: metaDescription,
-          name: `twitter:description`
+          name: `twitter:description`,
+          content: metaDescription
         }
-      ].concat(meta ? meta : [])}
+      ].concat(meta)}
     />
   );
 };
 
-Seo.defaultProps = {
-  description: ``,
-  lang: `en`,
-  meta: []
+SEO.defaultProps = {
+  lang: `en-GB`,
+  meta: [],
+  description: ``
 };
 
-export default Seo;
+export default SEO;

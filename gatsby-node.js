@@ -1,7 +1,11 @@
-/**
- * Implement Gatsby's Node APIs in this file.
- *
- * See: https://www.gatsbyjs.org/docs/node-apis/
- */
+const { createPages } = require('./lib/bootup/create-pages');
+const { onCreateNode } = require('./lib/bootup/on-create-node');
 
-// You can delete this file if you're not using it
+/** @type { import("gatsby").GatsbyNode } */
+const config = {};
+exports.config = config;
+
+config.createPages = createPages;
+config.onCreateNode = onCreateNode;
+
+module.exports = config;

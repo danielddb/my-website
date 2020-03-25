@@ -1,17 +1,17 @@
 @font-face {
-  font-family: "ars";
-  src: url("arsmaquettepro-regular-webfont.woff2") format("woff2"),
-    url("arsmaquettepro-regular-webfont.woff") format("woff");
+  font-display: swap;
+  font-family: "Avenir Next";
+  src: url("./AvenirNext-Regular.woff2") format("woff2"),
+    url("./AvenirNext-Regular.woff") format("woff");
   font-weight: normal;
   font-style: normal;
-  font-display: fallback;
 }
 
 @font-face {
-  font-family: "ars";
-  src: url("arsmaquettepro-bold-webfont.woff2") format("woff2"),
-    url("arsmaquettepro-bold-webfont.woff") format("woff");
+  font-display: swap;
+  font-family: "Avenir Next";
+  src: url("./AvenirNext-Bold.woff2") format("woff2"),
+    url("./AvenirNext-Bold.woff") format("woff");
   font-weight: bold;
   font-style: normal;
-  font-display: fallback;
 }
