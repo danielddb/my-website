@@ -1,56 +1,74 @@
 import { createGlobalStyle } from 'styled-components';
+import { normalize } from 'styled-normalize';
 import '../fonts/stylesheet.css';
-import * as mixins from '../theme/mixins';
-import { rootFontSize, rootLineHeightScale } from '../theme/theme';
-import { TypographyLevel } from '../theme/typography';
+import * as mixins from '../themes/mixins';
 
-const GlobalStyle = createGlobalStyle`  
+const GlobalStyle = createGlobalStyle`
+  ${normalize}
+
   html {
-    box-sizing: border-box;
-    font-size: ${(rootFontSize / 16) * 100}%;
-    line-height: ${rootLineHeightScale};
-
-    ${mixins.respondTo.md`
-      font-size: ${((rootFontSize + 2) / 16) * 100}%;
-    `}
+    ${mixins.html}
   }
 
-  *, *:before, *:after {
+  *,
+  *:before,
+  *:after {
     box-sizing: inherit;
   }
 
-  body {
-    font-family: 'ars', Arial, Helvetica, sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-  }
-
-  p, ul, ol, pre, table, blockquote {
-    ${mixins.type()}
+  html, body {
+    overflow-x:hidden 
   }
 
   h1 {
-    ${mixins.type(TypographyLevel.H1)}
+   ${mixins.h1}
   }
 
   h2 {
-    ${mixins.type(TypographyLevel.H2)}
+    ${mixins.h2}
   }
 
   h3 {
-    ${mixins.type(TypographyLevel.H3)}
+    ${mixins.h3}
   }
 
-  h4, h5, h6 {
-    ${mixins.type(TypographyLevel.H4)}
+  h4 {
+    ${mixins.h4}
   }
 
-  hr {
-    ${mixins.hr}
+  h5 {
+    ${mixins.h5}
+  }
+
+  h6 {
+    ${mixins.h6}
+  }
+
+  p {
+    ${mixins.p}
   }
 
   a {
-    ${mixins.link}
+    color: ${props => props.theme.palette.primary.light};
+    text-decoration: none;
+    display: inline-block;
+
+    &:hover,
+    &:focus {
+      text-decoration: underline;
+    }
+  }
+
+  pre {
+    ${mixins.pre}
+  }
+
+  pre, code {
+    font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  }
+
+  ul {
+    ${mixins.p}
   }
 `;
 

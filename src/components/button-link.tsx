@@ -1,11 +1,17 @@
+import { Link } from 'gatsby';
+import React from 'react';
 import styled from 'styled-components';
-import * as mixins from '../theme/mixins';
+import Button from './button';
+import { resetTextDecoration } from '../themes/mixins';
 
-const ButtonLink = styled.a`
-  ${mixins.button}
-
-  display: inline-block;
-  text-decoration: none;
+export const StyledLink = styled(Link)`
+  ${resetTextDecoration}
 `;
+
+const ButtonLink = ({ children, ...props }) => (
+  <Button as={StyledLink} {...props}>
+    {children}
+  </Button>
+);
 
 export default ButtonLink;

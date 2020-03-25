@@ -1,23 +1,8 @@
-import styled, { StyledProps } from 'styled-components';
-import * as mixins from '../theme/mixins';
+import styled from 'styled-components';
+import VerticalSpacing from './vertical-spacing';
 
-export type Props = StyledProps<{
-  alternate?: boolean;
-}>;
-
-const Band = styled.section`
-  padding: ${mixins.scale(2)} 0;
-  overflow-x: hidden;
-  background: ${(props: Props) =>
-    !props.alternate
-      ? props.theme.background
-      : props.theme.backgroundAlternate};
-
-  ${mixins.typeColor}
-
-  a {
-    ${mixins.link}
-  }
+export const Band = styled(VerticalSpacing)`
+  border-top: 1px solid ${props => props.theme.palette.divider};
 `;
 
 export default Band;

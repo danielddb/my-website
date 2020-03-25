@@ -1,15 +1,26 @@
 import styled from 'styled-components';
-import { scale } from '../theme/mixins';
-import { breakpoints } from '../theme/theme';
-import { toRem } from '../theme/typography';
+import { toRem } from '../themes/functions';
+import * as vars from '../themes/variables';
+import { respondTo } from '../themes/mixins';
 
-const Container = styled.div<{ centerText?: boolean }>`
+const Container = styled.div<{
+  maxWidth?: keyof typeof vars.Breakpoints;
+}>`
   margin: 0 auto;
-  width: 100%;
-  padding: 0 ${scale()};
-  max-width: ${toRem(breakpoints.sm)};
+  padding: 0 ${toRem(vars.spacingUnitMajorPx * 1.5)};
 
-  ${props => props.centerText && `text-align: center;`}
+  & > :first-child {
+    margin-top: 0;
+  }
+
+  ${({ maxWidth }) =>
+    respondTo[maxWidth]`
+      max-width: ${vars.breakpoints[maxWidth]};
+    `}
 `;
+
+Container.defaultProps = {
+  maxWidth: vars.Breakpoints.xs
+};
 
 export default Container;

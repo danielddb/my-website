@@ -1,44 +1,104 @@
+require('ts-node').register({ files: true, project: './tsconfig.node.json' });
+
+const {
+  NODE_ENV,
+  URL: NETLIFY_SITE_URL = 'http://danieldawson.co.uk',
+  DEPLOY_PRIME_URL: NETLIFY_DEPLOY_URL = NETLIFY_SITE_URL,
+  CONTEXT: NETLIFY_ENV = NODE_ENV
+} = process.env;
+const isNetlifyProduction = NETLIFY_ENV === 'production';
+const siteUrl = isNetlifyProduction ? NETLIFY_SITE_URL : NETLIFY_DEPLOY_URL;
+
 module.exports = {
   siteMetadata: {
-    title: `Daniel Dawson-Brown`,
-    description: `Daniel Dawson-Brown is a Birmingham based front end web developer specialising in React and Angular`,
+    siteUrl,
+    title: `Daniel Dawson`,
+    description: `UI Developer from Brum - Daniel Dawson`,
     author: `@daniel_ddb`,
+    socials: [
+      {
+        name: 'GitHub',
+        url: 'https://github.com/danielddb',
+        icon: 'github'
+      },
+      {
+        name: 'CodeSandbox',
+        url: 'https://codesandbox.io/u/danielddb',
+        icon: 'code-sandbox'
+      },
+      {
+        name: 'LinkedIn',
+        url: 'https://www.linkedin.com/in/dandawsonbrown',
+        icon: 'linkedin'
+      }
+    ]
   },
   plugins: [
+    `gatsby-plugin-typescript`,
+    `gatsby-plugin-styled-components`,
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,
-        path: `${__dirname}/src/images`,
-      },
+        path: `${__dirname}/src/images`
+      }
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `fonts`,
+        path: `${__dirname}/src/fonts`
+      }
+    },
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        path: `${__dirname}/content/blog`,
+        name: 'blog'
+      }
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `daniel-dawson-website`,
-        short_name: `daniel-dawson`,
+        name: `Daniel Dawson`,
+        short_name: `danieldawson`,
         start_url: `/`,
-        background_color: `#620376`,
-        theme_color: `#620376`,
-        display: `minimal-ui`,
-        icon: `src/images/icon.png`, // This path is relative to the root of the site.
-      },
+        background_color: `#101010`,
+        theme_color: `#af99e1`,
+        display: `standalone`,
+        icon: `src/images/gatsby-icon.png` // This path is relative to the root of the site.
+      }
     },
-    `gatsby-plugin-styled-components`,
     {
-      resolve: "gatsby-plugin-react-svg",
-      options: {
-        rule: {
-          include: /svgs/, // See below to configure properly
-        },
-      },
+      resolve: `gatsby-plugin-mdx`,
+      options: {}
     },
-    `gatsby-plugin-typescript`,
-    // this (optional) plugin enables Progressive Web App + Offline functionality
-    // To learn more, visit: https://gatsby.dev/offline
-    // `gatsby-plugin-offline`,
-  ],
-}
+    `gatsby-plugin-sitemap`,
+    {
+      resolve: `gatsby-plugin-robots-txt`,
+      options: {
+        resolveEnv: () => NETLIFY_ENV,
+        env: {
+          production: {
+            policy: [{ userAgent: '*' }]
+          },
+          'branch-deploy': {
+            policy: [{ userAgent: '*', disallow: ['/'] }],
+            sitemap: null,
+            host: null
+          },
+          'deploy-preview': {
+            policy: [{ userAgent: '*', disallow: ['/'] }],
+            sitemap: null,
+            host: null
+          }
+        }
+      }
+    }
+    // uncomment when https://github.com/gatsbyjs/gatsby/issues/12536 is fixed
+    // `gatsby-plugin-offline`
+  ]
+};
