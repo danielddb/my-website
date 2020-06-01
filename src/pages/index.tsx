@@ -86,9 +86,9 @@ const IndexPage: React.FC = () => {
                   Senior UI Developer
                 </Heading>
                 <p>
-                  I mainly lead the frontend design system architecture and
-                  development of the new npower.com with technologies such as
-                  TypeScript, Redux and Sass.
+                  I primarily helped lead the frontend design system
+                  architecture and development of the new npower.com with
+                  technologies such as TypeScript, Redux and Sass.
                 </p>
               </TimelineItemContent>
             </TimelineItem>
