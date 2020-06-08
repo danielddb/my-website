@@ -3,16 +3,35 @@ import React from 'react';
 import Layout from '../../src/components/layout';
 import Theme from '../../src/components/theme';
 import Code from '../../src/components/code';
+import styled from 'styled-components';
+import { toRem } from '../../src/themes/functions';
+import * as vars from '../../src/themes/variables';
+
+const BreakOutContainer = styled.span`
+  display: block;
+  margin: 0 -${toRem(vars.spacingUnitMajorPx * 1.5)};
+`;
 
 const components = {
+  img: props => {
+    return (
+      <BreakOutContainer>
+        <img {...props} />
+      </BreakOutContainer>
+    );
+  },
   pre: ({ children: { props } }) => {
     if (props.mdxType === 'code') {
       return (
-        <Code
-          codeString={props.children.trim()}
-          language={props.className && props.className.replace('language-', '')}
-          {...props}
-        />
+        <BreakOutContainer>
+          <Code
+            codeString={props.children.trim()}
+            language={
+              props.className && props.className.replace('language-', '')
+            }
+            {...props}
+          />
+        </BreakOutContainer>
       );
     } else {
       // it's possible to have a pre without a code in it

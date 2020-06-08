@@ -125,11 +125,37 @@ export const h6 = css`
 export const p = css`
   font-size: ${toRem(vars.rootFontSizePx)};
   line-height: ${toRem(vars.spacingUnitMajorPx * 2)};
-  margin: ${toRem(vars.spacingUnitMajorPx)} 0 0;
+  margin: ${toRem(vars.spacingUnitMajorPx * 2)} 0 0;
+`;
+
+export const codeFontFamily = css`
+  font-family: SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono',
+    'Courier New', monospace;
+`;
+
+export const code = css`
+  ${codeFontFamily}
+  font-size: ${toRem(vars.rootFontSizePx / vars.rootFontScale)};
+  padding: ${toRem(4)} ${toRem(4)};
+  background: ${props => props.theme.palette.background.card};
 `;
 
 export const pre = css`
+  ${codeFontFamily}
   ${p}
+`;
+
+export const blockquote = css`
+  ${p}
+  font-style: italic;
+  padding-left: ${toRem(vars.spacingUnitMajorPx)};
+  margin-left: 0px;
+  margin-right: 0px;
+  border-left: ${toRem(5)} solid ${props => props.theme.palette.primary.main};
+
+  & *:last-child {
+    margin-top: 0;
+  }
 `;
 
 export const resetTextDecoration = css`

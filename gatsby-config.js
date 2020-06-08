@@ -67,14 +67,31 @@ module.exports = {
         short_name: `danieldawson`,
         start_url: `/`,
         background_color: `#101010`,
-        theme_color: `#af99e1`,
+        theme_color: `#9b80d9`,
         display: `standalone`,
-        icon: `src/images/gatsby-icon.png` // This path is relative to the root of the site.
+        icon: `src/images/icon.png` // This path is relative to the root of the site.
       }
     },
     {
       resolve: `gatsby-plugin-mdx`,
-      options: {}
+      options: {
+        gatsbyRemarkPlugins: [
+          { resolve: 'gatsby-remark-copy-linked-files' },
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              maxWidth: 1200
+            }
+          },
+          {
+            resolve: 'gatsby-remark-external-links',
+            options: {
+              target: '_blank',
+              rel: 'nofollow'
+            }
+          }
+        ]
+      }
     },
     `gatsby-plugin-sitemap`,
     {

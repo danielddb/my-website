@@ -31,13 +31,19 @@ const BlogPost = ({ data, pageContext }) => {
 
   return (
     <>
-      <SEO title={post.frontmatter.title} />
+      <SEO
+        title={post.frontmatter.title}
+        description={post.frontmatter.description}
+      />
       <Band spacing={2}>
         <Container maxWidth={'sm'}>
           <Heading as="h1">{post.frontmatter.title}</Heading>
-          <Heading as="h3" variant="h6" isSubheading>
+          <Heading as="span" variant="h6" isSubheading>
             {post.frontmatter.date}
           </Heading>
+          <p>
+            <em>{post.frontmatter.description}</em>
+          </p>
           <MDXRenderer>{post.body}</MDXRenderer>
         </Container>
       </Band>
@@ -82,6 +88,7 @@ export const query = graphql`
       frontmatter {
         title
         date(formatString: "MMMM Do, YYYY")
+        description
       }
     }
   }
