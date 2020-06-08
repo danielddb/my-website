@@ -13,13 +13,6 @@ const BreakOutContainer = styled.span`
 `;
 
 const components = {
-  img: props => {
-    return (
-      <BreakOutContainer>
-        <img {...props} />
-      </BreakOutContainer>
-    );
-  },
   pre: ({ children: { props } }) => {
     if (props.mdxType === 'code') {
       return (

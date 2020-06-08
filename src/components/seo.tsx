@@ -8,13 +8,15 @@
 import React from 'react';
 import Helmet from 'react-helmet';
 import { useStaticQuery, graphql } from 'gatsby';
+import { FluidObject } from 'gatsby-image';
 
 const SEO: React.FC<{
   description?: string;
   lang?: string;
   meta?: any[];
+  fluidObject?: FluidObject;
   title: string;
-}> = ({ description, lang, meta, title }) => {
+}> = ({ description, lang, meta, fluidObject, title }) => {
   const { site } = useStaticQuery(
     graphql`
       query {
@@ -23,6 +25,7 @@ const SEO: React.FC<{
             title
             description
             author
+            siteUrl
           }
         }
       }
@@ -30,6 +33,9 @@ const SEO: React.FC<{
   );
 
   const metaDescription = description || site.siteMetadata.description;
+  const image = fluidObject
+    ? `${site.siteMetadata.siteUrl}${fluidObject.src}`
+    : null;
 
   return (
     <Helmet
@@ -40,35 +46,39 @@ const SEO: React.FC<{
       titleTemplate={`%s | ${site.siteMetadata.title}`}
       meta={[
         {
-          name: `description`,
+          name: 'description',
           content: metaDescription
         },
         {
-          property: `og:title`,
+          property: 'og:title',
           content: title
         },
         {
-          property: `og:description`,
+          property: 'og:description',
           content: metaDescription
         },
         {
-          property: `og:type`,
-          content: `website`
+          property: 'og:image',
+          content: image
         },
         {
-          name: `twitter:card`,
-          content: `summary`
+          property: 'og:type',
+          content: 'website'
         },
         {
-          name: `twitter:creator`,
+          name: 'twitter:card',
+          content: image ? 'summary_large_image' : 'summary'
+        },
+        {
+          name: 'twitter:creator',
           content: site.siteMetadata.author
         },
         {
-          name: `twitter:title`,
+          name: 'twitter:title',
           content: title
         },
         {
-          name: `twitter:description`,
+          name: 'twitter:description',
           content: metaDescription
         }
       ].concat(meta)}
@@ -77,9 +87,9 @@ const SEO: React.FC<{
 };
 
 SEO.defaultProps = {
-  lang: `en-GB`,
+  lang: 'en-GB',
   meta: [],
-  description: ``
+  description: ''
 };
 
 export default SEO;

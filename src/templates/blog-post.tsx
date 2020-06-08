@@ -1,5 +1,6 @@
 import React from 'react';
 import { graphql, Link } from 'gatsby';
+import Img from 'gatsby-image';
 import { MDXRenderer } from 'gatsby-plugin-mdx';
 import Band from '../components/band';
 import Container from '../components/container';
@@ -34,6 +35,7 @@ const BlogPost = ({ data, pageContext }) => {
       <SEO
         title={post.frontmatter.title}
         description={post.frontmatter.description}
+        fluidObject={post.frontmatter.banner.childImageSharp.fluid}
       />
       <Band spacing={2}>
         <Container maxWidth={'sm'}>
@@ -41,6 +43,12 @@ const BlogPost = ({ data, pageContext }) => {
           <Heading as="span" variant="h6" isSubheading>
             {post.frontmatter.date}
           </Heading>
+          <p>
+            <Img
+              fluid={post.frontmatter.banner.childImageSharp.fluid}
+              alt={`Banner image for ${post.frontmatter.title}`}
+            />
+          </p>
           <p>
             <em>{post.frontmatter.description}</em>
           </p>
@@ -89,6 +97,13 @@ export const query = graphql`
         title
         date(formatString: "MMMM Do, YYYY")
         description
+        banner {
+          childImageSharp {
+            fluid(maxWidth: 720) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
       }
     }
   }
