@@ -59,16 +59,25 @@ const GlobalStyle = createGlobalStyle`
     }
   }
 
+  code {
+    ${mixins.code}
+  }
+
   pre {
     ${mixins.pre}
   }
 
-  pre, code {
-    font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  ul, ol {
+    ${mixins.p}
   }
 
-  ul {
-    ${mixins.p}
+  blockquote {
+    ${mixins.blockquote}
+  }
+
+  img {
+    display: block;
+    max-width: 100%;
   }
 `;
 
