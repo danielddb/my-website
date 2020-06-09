@@ -2,7 +2,7 @@ require('ts-node').register({ files: true, project: './tsconfig.node.json' });
 
 const {
   NODE_ENV,
-  URL: NETLIFY_SITE_URL = 'http://danieldawson.co.uk',
+  URL: NETLIFY_SITE_URL = 'https://dandawsonbrown.com',
   DEPLOY_PRIME_URL: NETLIFY_DEPLOY_URL = NETLIFY_SITE_URL,
   CONTEXT: NETLIFY_ENV = NODE_ENV
 } = process.env;
@@ -12,8 +12,8 @@ const siteUrl = isNetlifyProduction ? NETLIFY_SITE_URL : NETLIFY_DEPLOY_URL;
 module.exports = {
   siteMetadata: {
     siteUrl,
-    title: `Daniel Dawson`,
-    description: `UI Developer from Brum - Daniel Dawson`,
+    title: `Dan Dawson-Brown`,
+    description: `UI Developer from Brum - Dan Dawson-Brown`,
     author: `@daniel_ddb`,
     socials: [
       {
@@ -63,8 +63,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Daniel Dawson`,
-        short_name: `danieldawson`,
+        name: `Dan Dawson-Brown`,
+        short_name: `dandawsonbrown`,
         start_url: `/`,
         background_color: `#101010`,
         theme_color: `#9b80d9`,

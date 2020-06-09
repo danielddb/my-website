@@ -45,7 +45,7 @@ const MainNavLinks = () => {
             href={social.url}
             target="_blank"
             rel="noopener"
-            aria-label={`Daniel Dawson's ${social.name} Page`}
+            aria-label={`Dan Dawson-Brown's ${social.name} Page`}
           >
             <Icon name={social.icon as IconName} id={`navbar-${social.icon}`} />
           </IconLink>

@@ -1,9 +1,9 @@
 {
   "name": "gatsby-starter-default",
   "private": true,
-  "description": "Daniel Dawson's personal website",
+  "description": "Dan Dawson-Brown's personal website",
   "version": "0.1.0",
-  "author": "Daniel Dawson-Brown <dandawsonbrown@gmail.com>",
+  "author": "Dan Dawson-Brown <dandawsonbrown@gmail.com>",
   "dependencies": {
     "@juggle/resize-observer": "^3.1.2",
     "@mdx-js/mdx": "^1.5.7",

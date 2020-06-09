@@ -30,7 +30,7 @@ const Avatar: React.FC<{ className?: string }> = ({ className }) => {
     <AvatarCircle className={className}>
       <Img
         fluid={data.placeholderImage.childImageSharp.fluid}
-        alt="Photo of Daniel Dawson"
+        alt="Photo of Dan Dawson-Brown"
       />
     </AvatarCircle>
   );

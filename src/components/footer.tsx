@@ -18,7 +18,7 @@ const Footer: React.FC = () => (
       <VerticalSpacing spacing={2}>
         <MainNavLinks />
       </VerticalSpacing>
-      <Caption>&copy; Daniel Dawson {new Date().getFullYear()}</Caption>
+      <Caption>&copy; Dan Dawson-Brown {new Date().getFullYear()}</Caption>
     </Container>
   </FooterBand>
 );

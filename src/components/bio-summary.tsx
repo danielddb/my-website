@@ -28,7 +28,7 @@ const BioSummary = () => (
       <BioAvatar />
     </AvatarWrap>
     <div>
-      <BioHeading as="h5">Daniel Dawson-Brown</BioHeading>
+      <BioHeading as="h5">Dan Dawson-Brown</BioHeading>
       <BioHeading as="h6" isSubheading>
         UI Developer from Brum building tech for Vermeg.
       </BioHeading>
