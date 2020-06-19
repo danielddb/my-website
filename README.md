@@ -1,4 +1,4 @@
-# dandawsonbrown.com &middot; [![Netlify Status](https://api.netlify.com/api/v1/badges/a570d1b3-d725-4785-9e13-d81a79dcc87a/deploy-status)](https://app.netlify.com/sites/nostalgic-williams-7442c3/deploys)
+# dandawsonbrown.com &middot; ![Tests](https://github.com/danielddb/my-website/workflows/Tests/badge.svg) ![Production deploy](https://github.com/danielddb/my-website/workflows/Production%20deploy/badge.svg)
 
 Built with:
 
