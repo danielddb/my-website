@@ -1,0 +1,23 @@
+import '@testing-library/jest-dom/extend-expect';
+import 'jest-axe/extend-expect';
+import 'jest-styled-components';
+
+declare var global: any;
+
+global.___loader = {
+  enqueue: jest.fn()
+};
+
+Object.defineProperty(window, 'matchMedia', {
+  writable: true,
+  value: jest.fn().mockImplementation(query => ({
+    matches: false,
+    media: query,
+    onchange: null,
+    addListener: jest.fn(), // deprecated
+    removeListener: jest.fn(), // deprecated
+    addEventListener: jest.fn(),
+    removeEventListener: jest.fn(),
+    dispatchEvent: jest.fn()
+  }))
+});

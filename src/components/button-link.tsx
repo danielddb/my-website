@@ -4,7 +4,9 @@ import styled from 'styled-components';
 import Button from './button';
 import { resetTextDecoration } from '../themes/mixins';
 
-export const StyledLink = styled(Link)`
+export const StyledLink = styled(({ primary, ...props }) => (
+  <Link {...props} />
+))`
   ${resetTextDecoration}
 `;
 

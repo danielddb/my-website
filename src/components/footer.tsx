@@ -4,7 +4,7 @@ import Container from './container';
 import Logo from './logo';
 import Band from './band';
 import VerticalSpacing from './vertical-spacing';
-import { Caption } from './caption';
+import Caption from './caption';
 import MainNavLinks from './main-nav-links';
 
 const FooterBand = styled(Band)`

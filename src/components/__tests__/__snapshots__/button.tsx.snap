@@ -1,0 +1,45 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`it should render correctly 1`] = `
+.c0 {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  -webkit-appearance: none;
+  display: inline-block;
+  position: relative;
+  padding: 1rem 2rem;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  background: none;
+  color: #101010;
+  border: 0.1875rem solid #101010;
+  -webkit-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
+  line-height: 1rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+.c0:hover,
+.c0:focus {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c0:focus,
+.c0:hover {
+  background: none;
+}
+
+.c0:active {
+  background: none;
+}
+
+<div>
+  <button
+    class="c0"
+  >
+    Button text
+  </button>
+</div>
+`;

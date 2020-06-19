@@ -1,0 +1,49 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`it should render correctly 1`] = `
+.c0 {
+  display: block;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 0.1875rem solid #e7e7e7;
+}
+
+<div>
+  <div
+    class="c0 gatsby-image-wrapper"
+    style="position: relative; overflow: hidden; display: inline-block; width: 64px; height: 64px;"
+  >
+    <img
+      alt=""
+      aria-hidden="true"
+      src="data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAUABQDASIAAhEBAxEB/8QAGAABAAMBAAAAAAAAAAAAAAAAAAECBAX/xAAXAQEBAQEAAAAAAAAAAAAAAAABAwAC/9oADAMBAAIQAxAAAAHPVWbVIOrmLbUHn//EABwQAAICAgMAAAAAAAAAAAAAAAABAhEDEBIhMf/aAAgBAQABBQKy6b94tbydmGCHBM//xAAUEQEAAAAAAAAAAAAAAAAAAAAg/9oACAEDAQE/AR//xAAVEQEBAAAAAAAAAAAAAAAAAAABEP/aAAgBAgEBPwEjP//EABoQAAIDAQEAAAAAAAAAAAAAAAARARAxIVL/2gAIAQEABj8CUSj0cZlYK//EABwQAAIDAAMBAAAAAAAAAAAAAAABESExUWFxkf/aAAgBAQABPyHkexBVwy2JbD0c5vD+HUIh8hFdg6m2pgts8P/aAAwDAQACAAMAAAAQrAeA/8QAGBEAAwEBAAAAAAAAAAAAAAAAAAExEBH/2gAIAQMBAT8QqOijz//EABcRAQEBAQAAAAAAAAAAAAAAAAEAETH/2gAIAQIBAT8QOFjdEht//8QAHhABAQACAgIDAAAAAAAAAAAAAREAITFBUWFxgaH/2gAIAQEAAT8QlUAsjTlUNNinPd8mSN7O+H5hwCbq2jEs+VNXA+J9QcoDUX7856WQ8YuQ6yOGf//Z"
+      style="position: absolute; top: 0px; left: 0px; width: 100%; height: 100%; object-fit: cover; object-position: center; opacity: 1; transition-delay: 500ms;"
+    />
+    <picture>
+      <source
+        srcset="/static/6f6ccd0263b69cfd693f71c17be8ac7c/cf62c/avatar.jpg 1x,
+/static/6f6ccd0263b69cfd693f71c17be8ac7c/eee8e/avatar.jpg 1.5x,
+/static/6f6ccd0263b69cfd693f71c17be8ac7c/6dc0c/avatar.jpg 2x"
+      />
+      <img
+        alt="Author avatar"
+        height="64"
+        loading="lazy"
+        src="/static/6f6ccd0263b69cfd693f71c17be8ac7c/cf62c/avatar.jpg"
+        srcset="/static/6f6ccd0263b69cfd693f71c17be8ac7c/cf62c/avatar.jpg 1x,
+/static/6f6ccd0263b69cfd693f71c17be8ac7c/eee8e/avatar.jpg 1.5x,
+/static/6f6ccd0263b69cfd693f71c17be8ac7c/6dc0c/avatar.jpg 2x"
+        style="position: absolute; top: 0px; left: 0px; width: 100%; height: 100%; object-fit: cover; object-position: center; opacity: 0; transition: opacity 500ms;"
+        width="64"
+      />
+    </picture>
+    <noscript>
+      &lt;picture&gt;&lt;source srcset="/static/6f6ccd0263b69cfd693f71c17be8ac7c/cf62c/avatar.jpg 1x,
+/static/6f6ccd0263b69cfd693f71c17be8ac7c/eee8e/avatar.jpg 1.5x,
+/static/6f6ccd0263b69cfd693f71c17be8ac7c/6dc0c/avatar.jpg 2x" /&gt;&lt;img loading="lazy" width="64" height="64" srcset="/static/6f6ccd0263b69cfd693f71c17be8ac7c/cf62c/avatar.jpg 1x,
+/static/6f6ccd0263b69cfd693f71c17be8ac7c/eee8e/avatar.jpg 1.5x,
+/static/6f6ccd0263b69cfd693f71c17be8ac7c/6dc0c/avatar.jpg 2x" src="/static/6f6ccd0263b69cfd693f71c17be8ac7c/cf62c/avatar.jpg" alt="Author avatar" style="position:absolute;top:0;left:0;opacity:1;width:100%;height:100%;object-fit:cover;object-position:center"/&gt;&lt;/picture&gt;
+    </noscript>
+  </div>
+</div>
+`;
