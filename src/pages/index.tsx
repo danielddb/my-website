@@ -81,7 +81,7 @@ const IndexPage: React.FC = () => {
             </TimelineItem>
             <TimelineItem>
               <TimelineItemContent>
-                <Heading as="h5">nPower</Heading>
+                <Heading as="h5">npower</Heading>
                 <Heading as="h6" isSubheading>
                   Senior UI Developer
                 </Heading>
@@ -94,7 +94,7 @@ const IndexPage: React.FC = () => {
             </TimelineItem>
             <TimelineItem>
               <TimelineItemContent>
-                <Heading as="h5">nPower</Heading>
+                <Heading as="h5">npower</Heading>
                 <Heading as="h6" isSubheading>
                   UI Developer
                 </Heading>
