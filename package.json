@@ -12,11 +12,16 @@
   "scripts": {
     "build": "gatsby build",
     "develop": "gatsby develop -H 0.0.0.0",
-    "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md,mdx}\"",
+    "format": "prettier --check \"**/*.{js,jsx,ts,tsx,json,md,mdx}\"",
     "start": "npm run develop",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
     "test": "jest"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "pretty-quick --staged"
+    }
   },
   "dependencies": {
     "@juggle/resize-observer": "^3.1.2",
@@ -64,11 +69,13 @@
     "@types/styled-components": "^5.0.1",
     "babel-jest": "^26.0.1",
     "babel-preset-gatsby": "^0.4.9",
+    "husky": "^4.2.5",
     "identity-obj-proxy": "^3.0.0",
     "jest": "^26.0.1",
     "jest-axe": "^3.4.0",
     "jest-styled-components": "^7.0.2",
     "prettier": "^1.19.1",
+    "pretty-quick": "^2.0.1",
     "react-test-renderer": "^16.13.1"
   }
 }

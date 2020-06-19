@@ -35,5 +35,8 @@ jobs:
       - name: Install Dependencies
         run: npm ci
 
+      - name: Format
+        run: npm run format
+
       - name: Test
         run: npm test -- --ci --runInBand
