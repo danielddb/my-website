@@ -1,17 +1,8 @@
 require('ts-node').register({ files: true, project: './tsconfig.node.json' });
 
-const {
-  NODE_ENV,
-  URL: NETLIFY_SITE_URL = 'https://dandawsonbrown.com',
-  DEPLOY_PRIME_URL: NETLIFY_DEPLOY_URL = NETLIFY_SITE_URL,
-  CONTEXT: NETLIFY_ENV = NODE_ENV
-} = process.env;
-const isNetlifyProduction = NETLIFY_ENV === 'production';
-const siteUrl = isNetlifyProduction ? NETLIFY_SITE_URL : NETLIFY_DEPLOY_URL;
-
 module.exports = {
   siteMetadata: {
-    siteUrl,
+    siteUrl: 'https://dandawsonbrown.com',
     title: `Dan Dawson-Brown`,
     description: `UI Developer from Brum - Dan Dawson-Brown`,
     author: `@daniel_ddb`,
@@ -97,17 +88,11 @@ module.exports = {
     {
       resolve: `gatsby-plugin-robots-txt`,
       options: {
-        resolveEnv: () => NETLIFY_ENV,
         env: {
           production: {
             policy: [{ userAgent: '*' }]
           },
-          'branch-deploy': {
-            policy: [{ userAgent: '*', disallow: ['/'] }],
-            sitemap: null,
-            host: null
-          },
-          'deploy-preview': {
+          development: {
             policy: [{ userAgent: '*', disallow: ['/'] }],
             sitemap: null,
             host: null

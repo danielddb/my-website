@@ -9,6 +9,7 @@ import SEO from '../components/seo';
 import styled from 'styled-components';
 import BioSummary from '../components/bio-summary';
 import { spacingUnitMajorPx } from '../themes/variables';
+import VerticalSpacing from '../components/vertical-spacing';
 import { toRem } from '../themes/functions';
 
 const NextPreviousLinks = styled.ul`
@@ -43,12 +44,12 @@ const BlogPost = ({ data, pageContext }) => {
           <Heading as="span" variant="h6" isSubheading>
             {post.frontmatter.date}
           </Heading>
-          <p>
+          <VerticalSpacing spacing={2} topOnly>
             <Img
               fluid={post.frontmatter.banner.childImageSharp.fluid}
               alt={`Banner image for ${post.frontmatter.title}`}
             />
-          </p>
+          </VerticalSpacing>
           <p>
             <em>{post.frontmatter.description}</em>
           </p>

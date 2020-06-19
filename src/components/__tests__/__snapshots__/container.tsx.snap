@@ -1,0 +1,126 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`it should render correctly 1`] = `
+.c0 {
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.c0 > :first-child {
+  margin-top: 0;
+}
+
+@media (min-width:36em) {
+  .c0 {
+    max-width: 36em;
+  }
+}
+
+<div>
+  <div
+    class="c0"
+  >
+    Test
+  </div>
+</div>
+`;
+
+exports[`it should render correctly at "lg" breakpoint 1`] = `
+.c0 {
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.c0 > :first-child {
+  margin-top: 0;
+}
+
+@media (min-width:75em) {
+  .c0 {
+    max-width: 75em;
+  }
+}
+
+<div>
+  <div
+    class="c0"
+  >
+    Test
+  </div>
+</div>
+`;
+
+exports[`it should render correctly at "md" breakpoint 1`] = `
+.c0 {
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.c0 > :first-child {
+  margin-top: 0;
+}
+
+@media (min-width:62em) {
+  .c0 {
+    max-width: 62em;
+  }
+}
+
+<div>
+  <div
+    class="c0"
+  >
+    Test
+  </div>
+</div>
+`;
+
+exports[`it should render correctly at "sm" breakpoint 1`] = `
+.c0 {
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.c0 > :first-child {
+  margin-top: 0;
+}
+
+@media (min-width:48em) {
+  .c0 {
+    max-width: 48em;
+  }
+}
+
+<div>
+  <div
+    class="c0"
+  >
+    Test
+  </div>
+</div>
+`;
+
+exports[`it should render correctly at "xs" breakpoint 1`] = `
+.c0 {
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.c0 > :first-child {
+  margin-top: 0;
+}
+
+@media (min-width:36em) {
+  .c0 {
+    max-width: 36em;
+  }
+}
+
+<div>
+  <div
+    class="c0"
+  >
+    Test
+  </div>
+</div>
+`;

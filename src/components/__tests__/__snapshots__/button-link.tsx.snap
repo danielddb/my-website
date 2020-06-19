@@ -1,0 +1,147 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`it should render correctly 1`] = `
+.c1 {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  -webkit-appearance: none;
+  display: inline-block;
+  position: relative;
+  padding: 1rem 2rem;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  background: none;
+  color: #101010;
+  border: 0.1875rem solid #101010;
+  -webkit-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
+  line-height: 1rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+.c1:hover,
+.c1:focus {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c1:focus,
+.c1:hover {
+  background: none;
+}
+
+.c1:active {
+  background: none;
+}
+
+.c0 {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c0:hover,
+.c0:focus {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+<div>
+  <a
+    class="c0 c1"
+    href="/"
+  >
+    Test
+  </a>
+</div>
+`;
+
+exports[`it should render correctly when rendered as a native "a" tag 1`] = `
+.c0 {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  -webkit-appearance: none;
+  display: inline-block;
+  position: relative;
+  padding: 1rem 2rem;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  background: none;
+  color: #101010;
+  border: 0.1875rem solid #101010;
+  -webkit-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
+  line-height: 1rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+.c0:hover,
+.c0:focus {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c0:focus,
+.c0:hover {
+  background: none;
+}
+
+.c0:active {
+  background: none;
+}
+
+<div>
+  <a
+    class="c0"
+    href="/"
+  >
+    Test
+  </a>
+</div>
+`;
+
+exports[`it should render correctly with the primary styles applied 1`] = `
+.c0 {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  -webkit-appearance: none;
+  display: inline-block;
+  position: relative;
+  padding: 1rem 2rem;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  background: #3701b3;
+  color: #fff;
+  border: 0.1875rem solid transparent;
+  -webkit-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
+  line-height: 1rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+.c0:hover,
+.c0:focus {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c0:focus,
+.c0:hover {
+  background: #4b1abb;
+}
+
+.c0:active {
+  background: #3201a1;
+}
+
+<div>
+  <a
+    class="c0"
+    href="/"
+  >
+    Test
+  </a>
+</div>
+`;

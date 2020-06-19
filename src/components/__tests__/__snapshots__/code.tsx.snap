@@ -1,0 +1,363 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`it should render correctly 1`] = `
+.c0 {
+  position: relative;
+}
+
+.c1 {
+  text-align: left;
+  padding: 0.5rem;
+  overflow-x: auto;
+  border-radius: 0.25rem;
+}
+
+.c2 {
+  display: inline-block;
+  width: 2em;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  opacity: 0.3;
+}
+
+<div>
+  <div
+    class="c0"
+  >
+    <pre
+      class="c1 prism-code language-ts"
+      style="color: rgb(214, 222, 235); background-color: rgb(1, 22, 39);"
+    >
+      <div
+        class="token-line"
+        style="color: rgb(214, 222, 235);"
+      >
+        <span
+          class="c2"
+          data-testid="line-number"
+        >
+          1
+        </span>
+        <span
+          class="token keyword"
+          style="color: rgb(127, 219, 202);"
+        >
+          const
+        </span>
+        <span
+          class="token plain"
+        >
+           routes
+        </span>
+        <span
+          class="token punctuation"
+          style="color: rgb(199, 146, 234);"
+        >
+          :
+        </span>
+        <span
+          class="token plain"
+        >
+           
+        </span>
+        <span
+          class="token maybe-class-name"
+        >
+          Routes
+        </span>
+        <span
+          class="token plain"
+        >
+           
+        </span>
+        <span
+          class="token operator"
+          style="color: rgb(127, 219, 202);"
+        >
+          =
+        </span>
+        <span
+          class="token plain"
+        >
+           
+        </span>
+        <span
+          class="token punctuation"
+          style="color: rgb(199, 146, 234);"
+        >
+          [
+        </span>
+        <span
+          class="token plain"
+        />
+      </div>
+      <div
+        class="token-line"
+        style="color: rgb(214, 222, 235);"
+      >
+        <span
+          class="c2"
+          data-testid="line-number"
+        >
+          2
+        </span>
+        <span
+          class="token plain"
+        >
+              
+        </span>
+        <span
+          class="token punctuation"
+          style="color: rgb(199, 146, 234);"
+        >
+          {
+        </span>
+        <span
+          class="token plain"
+        />
+      </div>
+      <div
+        class="token-line"
+        style="color: rgb(214, 222, 235);"
+      >
+        <span
+          class="c2"
+          data-testid="line-number"
+        >
+          3
+        </span>
+        <span
+          class="token plain"
+        >
+                path
+        </span>
+        <span
+          class="token punctuation"
+          style="color: rgb(199, 146, 234);"
+        >
+          :
+        </span>
+        <span
+          class="token plain"
+        >
+           
+        </span>
+        <span
+          class="token string"
+          style="color: rgb(173, 219, 103);"
+        >
+          'customers'
+        </span>
+        <span
+          class="token punctuation"
+          style="color: rgb(199, 146, 234);"
+        >
+          ,
+        </span>
+        <span
+          class="token plain"
+        />
+      </div>
+      <div
+        class="token-line"
+        style="color: rgb(214, 222, 235);"
+      >
+        <span
+          class="c2"
+          data-testid="line-number"
+        >
+          4
+        </span>
+        <span
+          class="token plain"
+        >
+                
+        </span>
+        <span
+          class="token function-variable function"
+          style="color: rgb(130, 170, 255);"
+        >
+          loadChildren
+        </span>
+        <span
+          class="token punctuation"
+          style="color: rgb(199, 146, 234);"
+        >
+          :
+        </span>
+        <span
+          class="token plain"
+        >
+           
+        </span>
+        <span
+          class="token punctuation"
+          style="color: rgb(199, 146, 234);"
+        >
+          (
+        </span>
+        <span
+          class="token punctuation"
+          style="color: rgb(199, 146, 234);"
+        >
+          )
+        </span>
+        <span
+          class="token plain"
+        >
+           
+        </span>
+        <span
+          class="token arrow operator"
+          style="color: rgb(127, 219, 202);"
+        >
+          =&gt;
+        </span>
+        <span
+          class="token plain"
+        >
+           
+        </span>
+        <span
+          class="token keyword"
+          style="color: rgb(127, 219, 202);"
+        >
+          import
+        </span>
+        <span
+          class="token punctuation"
+          style="color: rgb(199, 146, 234);"
+        >
+          (
+        </span>
+        <span
+          class="token string"
+          style="color: rgb(173, 219, 103);"
+        >
+          './customers/customers.module'
+        </span>
+        <span
+          class="token punctuation"
+          style="color: rgb(199, 146, 234);"
+        >
+          )
+        </span>
+        <span
+          class="token punctuation"
+          style="color: rgb(199, 146, 234);"
+        >
+          .
+        </span>
+        <span
+          class="token method function property-access"
+          style="color: rgb(130, 170, 255);"
+        >
+          then
+        </span>
+        <span
+          class="token punctuation"
+          style="color: rgb(199, 146, 234);"
+        >
+          (
+        </span>
+        <span
+          class="token parameter"
+        >
+          m
+        </span>
+        <span
+          class="token plain"
+        >
+           
+        </span>
+        <span
+          class="token arrow operator"
+          style="color: rgb(127, 219, 202);"
+        >
+          =&gt;
+        </span>
+        <span
+          class="token plain"
+        >
+           m
+        </span>
+        <span
+          class="token punctuation"
+          style="color: rgb(199, 146, 234);"
+        >
+          .
+        </span>
+        <span
+          class="token property-access maybe-class-name"
+        >
+          CustomersModule
+        </span>
+        <span
+          class="token punctuation"
+          style="color: rgb(199, 146, 234);"
+        >
+          )
+        </span>
+        <span
+          class="token plain"
+        />
+      </div>
+      <div
+        class="token-line"
+        style="color: rgb(214, 222, 235);"
+      >
+        <span
+          class="c2"
+          data-testid="line-number"
+        >
+          5
+        </span>
+        <span
+          class="token plain"
+        >
+              
+        </span>
+        <span
+          class="token punctuation"
+          style="color: rgb(199, 146, 234);"
+        >
+          }
+        </span>
+        <span
+          class="token plain"
+        />
+      </div>
+      <div
+        class="token-line"
+        style="color: rgb(214, 222, 235);"
+      >
+        <span
+          class="c2"
+          data-testid="line-number"
+        >
+          6
+        </span>
+        <span
+          class="token plain"
+        >
+            
+        </span>
+        <span
+          class="token punctuation"
+          style="color: rgb(199, 146, 234);"
+        >
+          ]
+        </span>
+        <span
+          class="token punctuation"
+          style="color: rgb(199, 146, 234);"
+        >
+          ;
+        </span>
+      </div>
+    </pre>
+  </div>
+</div>
+`;

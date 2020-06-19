@@ -1,8 +1,6 @@
-import React from 'react';
 import styled from 'styled-components';
 import { toRem } from '../themes/functions';
 import { spacingUnitMajorPx } from '../themes/variables';
-import { Link } from 'gatsby';
 import { resetTextDecoration } from '../themes/mixins';
 
 export const Button = styled.button<{ primary?: boolean }>`
@@ -40,9 +38,5 @@ export const Button = styled.button<{ primary?: boolean }>`
       props.primary ? props.theme.palette.primary.dark : 'none'};
   }
 `;
-
-Button.defaultProps = {
-  primary: false
-};
 
 export default Button;
