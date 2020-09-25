@@ -73,9 +73,9 @@ const IndexPage: React.FC = () => {
                   UI Developer
                 </Heading>
                 <p>
-                  I'm currently responsible for building regulatory reporting
-                  and collateral management web applications for Banks with
-                  Angular and NGRX.
+                  I was responsible for building regulatory reporting and
+                  collateral management web applications for Banks using Angular
+                  and NGRX.
                 </p>
               </TimelineItemContent>
             </TimelineItem>

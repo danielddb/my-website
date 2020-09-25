@@ -43,7 +43,7 @@ const DefaultHeroAvatar: React.FC<GatsbyImageProps> = () => {
 
 const Hero: React.FC<Props> = ({
   title = 'UI Developer from Brum',
-  subtitle = 'I currently build financial web apps for Vermeg',
+  subtitle = 'I specialise in building Angular and React web apps',
   avatar = <DefaultHeroAvatar />
 }) => (
   <Band spacing={4}>
